@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Individu 1</title>
+    <style type=text/css> 
+    body{
+        width: 280px;
+        height: 653px;
+    }
+     th{
+        background-color: rgb(33, 203, 209);
+        color: rgb(5, 5, 5);
+     }
+     
+     </style>
+</head>
+<body>
+    <table border=1px solid black style="width:150%">
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>NIM</th>
+            <th>Nilai</th>
+            <th>Huruf Mutu</th>
+        </tr>
+        <script language="javascript" type="text/javascript">
+            const Nama= ["Boy","Aldi","Ade","Ani","Dina","Candy","Ayu","Desi","Adri","Randy"];
+            const NIM = [123, 124, 125, 126, 127, 128, 129, 130, 131, 132];
+            const Nilai = [60,70,40,8,86,71,90,50,20,90];
+
+            var mutu="Default";
+            for (var x=0; x < 10; x++) {
+                if(Nilai[x]>=80){
+                    mutu=" A";
+                }
+                else if(Nilai[x]>=70 ){
+                    mutu="AB"; 
+                }
+                else if(Nilai[x]>=60 ){ 
+                    mutu="B"; 
+                }
+                else if(Nilai[x]>=50 ){
+                    mutu="BC"; 
+                }
+                else if(Nilai[x]>=40 ){
+                    mutu="C"; 
+                }
+                else if(Nilai[x]>=10 ){
+                    mutu="D"; 
+                }
+                else if(Nilai[x]<10 ){
+                    mutu="E"; 
+                }
+                document.write("<tr>");
+                    document.write("<td>",x+1,"</td>");
+                    document.write("<td>",Nama[x],"</td>");
+                    document.write("<td>",NIM[x],"</td>");
+                    document.write("<td>",Nilai[x],"</td>");
+                    document.write("<td>",mutu,"</td>");
+            document.write("</tr>");
+            }
+        </script>
+    </table>
+</body>
+</html>
